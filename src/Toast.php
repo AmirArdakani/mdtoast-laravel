@@ -58,7 +58,7 @@ class Toast
      */
     public function add($type, $content, $option = null)
     {
-        $types = ['info', 'warning', 'success', 'error'];
+        $types = ['default', 'info', 'warning', 'success', 'error'];
 
         if (! in_array($type, $types)) {
             throw new Exception("The $type remind message is not valid.");
@@ -71,6 +71,19 @@ class Toast
         ];
 
         $this->session->flash('toast::message', $this->messages);
+    }
+
+    /**
+     * Add an default flash message to session.
+     *
+     * @param string $content The flash message content.
+     * @param string $option The flash message option.
+     *
+     * @return void
+     */
+    public function default($content, $option = null)
+    {
+        $this->add('default', $content, $option);
     }
 
     /**
