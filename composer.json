@@ -1,0 +1,37 @@
+{
+    "name": "amirardakani/mdtoast",
+    "description": "mdtoast.js for laravel",
+    "keywords": ["MaterialToast", "notification", "laravel", "mdtoast"],
+    "homepage": "https://github.com/AmirArdakani/mdtoast-laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Amir Ardakani",
+            "email": "amiraliardakani73@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Amirardakani\\MaterialToast\\": "src/"
+        },
+        "files": [
+            "src/helper.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Amirardakani\\MaterialToast\\ToastServiceProvider"
+            ],
+            "aliases": {
+                "Toast": "Amirardakani\\MaterialToast\\Facades\\Toast"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+    "php": ">=5.5.0",
+        "illuminate/support": ">=5.2.7",
+        "illuminate/session": ">=5.2.7"
+    }
+}
