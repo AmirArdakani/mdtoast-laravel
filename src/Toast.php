@@ -39,7 +39,7 @@ class Toast
         foreach ($messages as $message) {
             $option = $message['option'] ?: null;
             $type = $message['type'];
-            $script .= '$.mdtoast'.'(\'' . $message['content'] ."',{ type: '$type', $option }" .');';
+            $script .= 'mdtoast'.'(\'' . $message['content'] ."',{ type: '$type', $option }" .');';
         }
 
         $script .= '</script>';
