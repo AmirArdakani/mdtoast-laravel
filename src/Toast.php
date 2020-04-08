@@ -49,7 +49,7 @@ class Toast
 
     /**
      *
-     * Add a flash message to session.
+     * Add a Flash message to session.
      *
      * @param string $content The flash message content.
      * @param string $type Must be one of info, success, warning, error.
